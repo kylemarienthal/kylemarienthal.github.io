@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+h1 {
+  text-align: center;
+  font-size: 575%;
+  color: #FF0000;
+  text-transform: uppercase;
+  letter-spacing: 1%;
+  margin: 45%, 0%;
+}
+h2 {
+  text-align: center;
+  font-size: 275%;
+  color: #11A1B6;
+  text-transform: uppercase;
+  letter-spacing: 1%;
+}
+h3 {
+  text-align: center;
+  font-size: 275%;
+  color: #11A1B6;
+  text-transform: uppercase;
+  letter-spacing: 1%;
+}
+/* start parallax */
+#parallax{
+  background: url('images/sunset_tree.jpg') repeat fixed 100%;
+}
+#parallax-second{
+  background: url('images/sunset_tree.jpg') repeat fixed 100%;
+
+}
+
+.parallax-inner{
+
+}
+/* end parallax */
