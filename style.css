@@ -21,8 +21,8 @@ h2 {
 h3 {
   text-align: center;
   font-size: 275%;
-  color: #11A1B6;
-  text-transform: uppercase;
+  /* color: #11A1B6; */
+  /* text-transform: uppercase; */
   letter-spacing: 1%;
 }
 /* start parallax */
@@ -39,6 +39,6 @@ h3 {
 }
 /* end parallax */
 .contact-icon{
-  width: 128px;
-  height: 128px;
+  width: 32px;
+  height: auto;
 }
