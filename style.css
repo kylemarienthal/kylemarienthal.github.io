@@ -38,7 +38,14 @@ h3 {
 
 }
 /* end parallax */
+#contact{
+  text-align: center;
+}
 .contact-icon{
   width: 32px;
   height: auto;
+
+}
+.contact-info{
+  display: inline-block;
 }
