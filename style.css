@@ -3,6 +3,9 @@
   padding: 0;
   border: 0;
 }
+body {
+  background-color: black;
+}
 h1 {
   text-align: center;
   font-size: 575%;
@@ -27,10 +30,15 @@ h3 {
 }
 /* start parallax */
 #parallax{
-  background: url('images/KYLE.png') repeat fixed 100%;
+  background: url('images/kyle.png') no-repeat fixed 100%;
+  background-position: 50% 50%;
+  background-size: 90% 150%;
 }
 #parallax-second{
-  background: url('images/KYLE.png') repeat fixed 100%;
+  background: url('images/kyle.png') no-repeat fixed 100%;
+  background-position: 50% 50%;
+  background-size: 90% 150%;
+
 
 }
 
