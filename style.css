@@ -32,12 +32,14 @@ h3 {
 #parallax{
   background: url('images/kyle.png') no-repeat fixed 100%;
   background-position: 50% 50%;
-  background-size: 90% 150%;
+  background-size: cover;
+  height: 500px;
 }
 #parallax-second{
   background: url('images/kyle.png') no-repeat fixed 100%;
   background-position: 50% 50%;
-  background-size: 90% 150%;
+  height: 500px;
+  background-size: cover;
 
 
 }
