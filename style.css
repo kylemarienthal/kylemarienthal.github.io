@@ -32,6 +32,14 @@ h3 {
   /* text-transform: uppercase; */
   letter-spacing: 1%;
 }
+
+.contact_icon {
+    position: relative;
+    top: 7px;
+    right: 0px;
+    height: 25px;
+    width: auto;
+}
 /* start parallax */
 /* #parallax{
   background: url('images/kyle.png') no-repeat fixed 100%;
