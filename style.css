@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   border: 0;
+  text-shadow: -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
 }
 body {
   background-color: black;
@@ -9,7 +13,7 @@ body {
 h1 {
   text-align: center;
   font-size: 575%;
-  color: #FF0000;
+  color: #000000;
   text-transform: uppercase;
   letter-spacing: 1%;
   margin: 45%, 0%;
@@ -29,7 +33,7 @@ h3 {
   letter-spacing: 1%;
 }
 /* start parallax */
-#parallax{
+/* #parallax{
   background: url('images/kyle.png') no-repeat fixed 100%;
   background-position: 50% 50%;
   background-size: cover;
@@ -42,11 +46,18 @@ h3 {
   background-size: cover;
 
 
-}
+} */
 
+.parallax-window {
+    /* min-height: 500px; */
+    padding: 100px 35px;
+    background: transparent;
+}
 .parallax-inner{
-
+  z-index: 2;
+  position: relative;
 }
+
 /* end parallax */
 #contact{
   text-align: center;
