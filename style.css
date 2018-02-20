@@ -58,10 +58,15 @@ h3 {
 
 .parallax-window {
     /* min-height: 500px; */
+    height: 500px;
     padding: 100px 35px;
     background: transparent;
 }
 .parallax-inner{
+  z-index: 2;
+  position: relative;
+}
+.parallax-second-inner{
   z-index: 2;
   position: relative;
 }
