@@ -10,6 +10,13 @@
 body {
   background-color: black;
 }
+#name_bar{
+background: linear-gradient(white, black);
+}
+#middle_bar{
+background: linear-gradient(black, #3C3C3C,gray,#3C3C3C, black);
+}
+
 h1 {
   text-align: center;
   font-size: 575%;
@@ -41,27 +48,26 @@ h3 {
     width: auto;
 }
 /* start parallax */
-/* #parallax{
-  background: url('images/kyle.png') no-repeat fixed 100%;
-  background-position: 50% 50%;
-  background-size: cover;
+#parallax{
+  background: url('images/kyle.png') repeat-y fixed 50%;
+  background-position: 50% 50%;/*this is how far the image is set to the right and down*/
+  background-size: contain;
   height: 500px;
 }
 #parallax-second{
-  background: url('images/kyle.png') no-repeat fixed 100%;
+  background: url('images/KYLE.png') repeat-y fixed 50%;
   background-position: 50% 50%;
   height: 500px;
-  background-size: cover;
+  background-size: contain;
 
 
-} */
+}
 
-.parallax-window {
-    /* min-height: 500px; */
+/* .parallax-window {
     height: 500px;
     padding: 100px 35px;
     background: transparent;
-}
+} */
 .parallax-inner{
   z-index: 2;
   position: relative;
