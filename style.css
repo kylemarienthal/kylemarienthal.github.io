@@ -7,6 +7,15 @@
     -1px 1px 0 #ffffff,
     1px 1px 0 #ffffff;
 }
+
+#my_pic{
+  transform: rotate(90deg);
+  object-fit: cover;
+  height: 30%;
+  width: 50%;
+  border-radius: 50%;
+}
+
 body {
   background-color: black;
 }
