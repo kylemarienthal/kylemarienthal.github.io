@@ -7,13 +7,24 @@
     -1px 1px 0 #ffffff,
     1px 1px 0 #ffffff;
 }
-
-#my_pic{
-  transform: rotate(90deg);
-  object-fit: cover;
-  height: 30%;
-  width: 50%;
+#pic_container{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
   border-radius: 50%;
+  /* background: blue; */
+  /* border: solid 1px green; */
+  margin: 0 auto;
+
+}
+#my_pic{
+  margin-top: 30px;
+  margin-left: -50px;
+  /* border: solid 1px red; */
+  transform: rotate(90deg);
+  height: 100%;
+  /* width: 100%; */
 }
 
 body {
