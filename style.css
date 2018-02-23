@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   border: 0;
-  text-shadow: -1px -1px 0 #ffffff,
-    1px -1px 0 #ffffff,
-    -1px 1px 0 #ffffff,
-    1px 1px 0 #ffffff;
+  color: white;
+  text-shadow: -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 }
+
 #pic_container{
   position: relative;
   width: 300px;
@@ -31,8 +33,9 @@ body {
   background-color: black;
 }
 #name_bar{
-background: linear-gradient(white, black);
+background: linear-gradient(black, #3C3C3C,gray,#3C3C3C, black);
 }
+
 #middle_bar{
 background: linear-gradient(black, #3C3C3C,gray,#3C3C3C, black);
 }
@@ -40,8 +43,12 @@ background: linear-gradient(black, #3C3C3C,gray,#3C3C3C, black);
 h1 {
   text-align: center;
   font-size: 575%;
-  color: #000000;
-  text-transform: uppercase;
+  color: black;
+  text-shadow: -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+  /* text-transform: uppercase; */
   letter-spacing: 1%;
   margin: 45%, 0%;
 }
@@ -68,6 +75,13 @@ h3 {
     width: auto;
 }
 /* start parallax */
+
+#parallax_top{
+  background: url('images/kyle.png') repeat-y fixed 50%;
+  background-position: 50% 50%;/*this is how far the image is set to the right and down*/
+  background-size: contain;
+  height: 500px;
+}
 #parallax{
   background: url('images/kyle.png') repeat-y fixed 50%;
   background-position: 50% 50%;/*this is how far the image is set to the right and down*/
@@ -91,6 +105,11 @@ h3 {
 .parallax-inner{
   z-index: 2;
   position: relative;
+  margin: 10px 50px 20px;
+  color: white;
+  /* text-transform: uppercase; */
+  font-size: 130%;
+  text-align: center;
 }
 .parallax-second-inner{
   z-index: 2;
@@ -108,4 +127,10 @@ h3 {
 }
 .contact-info{
   display: inline-block;
+}
+#about_me p{
+  margin: 10px 50px 20px;
+  color: white;
+  font-size: 130%;
+  text-align: center;
 }
