@@ -75,13 +75,6 @@ h3 {
     width: auto;
 }
 /* start parallax */
-
-#parallax_top{
-  background: url('images/kyle.png') repeat-y fixed 50%;
-  background-position: 50% 50%;/*this is how far the image is set to the right and down*/
-  background-size: contain;
-  height: 500px;
-}
 #parallax{
   background: url('images/kyle.png') repeat-y fixed 50%;
   background-position: 50% 50%;/*this is how far the image is set to the right and down*/
