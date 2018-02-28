@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Space Invaders 2</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="background">
+      <div id="hero"></div>
+      <!-- <div id="deadHero"></div> -->
+      <!-- <div class="enemy"></div> -->
+      <div id="missiles"></div>
+      <div id="enemies"></div>
+    </div>
+    <script>
+      var hero = {
+        top: 700,
+        left: 550,
+        bottom: 750,
+        right: 600
+
+      };
+      var deadHero = {
+        top:700,
+        left: 550,
+        bottom: 750,
+        right: 500
+      }
+      var missiles = [];
+      var enemies = [
+        { left: 200, top: 100 },
+        { left: 300, top: 100 },
+        { left: 400, top: 100 },
+        { left: 500, top: 100 },
+        { left: 600, top: 100 },
+        { left: 700, top: 100 },
+        { left: 800, top: 100 },
+        { left: 900, top: 100 },
+        { left: 200, top: 175 },
+        { left: 300, top: 175 },
+        { left: 400, top: 175 },
+        { left: 500, top: 175 },
+        { left: 600, top: 175 },
+        { left: 700, top: 175 },
+        { left: 800, top: 175 },
+        { left: 900, top: 175 }
+      ];
+
+      document.onkeydown = function(e){
+        // console.log(e.keyCode);
+        if (e.keyCode === 37){
+          // console.log('LEFT');
+          hero.left = hero.left - 10;
+          moveHero();
+        }
+        else if (e.keyCode === 38){
+          // console.log('UP');
+          hero.top = hero.top - 10;
+          moveHero();
+        }
+        else if (e.keyCode === 39){
+          // console.log('RIGHT');
+          hero.left = hero.left + 10;
+          moveHero();
+        }
+        else if (e.keyCode === 40){
+          // console.log('DOWN');
+          hero.top = hero.top + 10;
+          moveHero();
+        }
+        else if (e.keyCode === 32){
+          // console.log('FIRE');
+          missiles.push({
+            left: hero.left + 15,
+            top: hero.top
+          })
+          drawMissiles();
+          // console.log(missiles);//this is the array that the missiles are stored in
+        }
+      }
+      function moveHero(){
+        document.getElementById('hero').style.left = hero.left + 'px';
+        document.getElementById('hero').style.top = hero.top + 'px';
+      }
+
+      function drawMissiles() {
+        document.getElementById('missiles').innerHTML = "";
+        for (var missile = 0; missile < missiles.length; missile++) {
+          document.getElementById('missiles').innerHTML += `<div class='missile' style='left:${missiles[missile].left}px; top:${missiles[missile].top}px;'></div>`;
+        }
+      }
+
+      function moveMissiles() {
+        for (var missile = 0; missile < missiles.length; missile++) {
+          missiles[missile].top -= 5;
+        }
+
+      }
+
+      function drawEnemies(){
+        document.getElementById('enemies').innerHTML = '';
+        for (var enemy = 0; enemy < enemies.length; enemy++) {
+          document.getElementById('enemies').innerHTML += `<div class = 'enemy' style = 'left:${enemies[enemy].left}px; top:${enemies[enemy].top}px;'></div>`
+        }
+      }
+
+      function moveEnemies() {
+        for (var enemy = 0; enemy < enemies.length; enemy++) {
+          enemies[enemy].top += 2;
+        }
+
+      }
+
+      function collisionDetection() {//try and figure out a better way than using a nested loop
+        for (var enemy = 0; enemy < enemies.length; enemy++) {
+          for (var missile = 0; missile < missiles.length; missile++) {
+            if((missiles[missile].top <= enemies[enemy].top + 50) && (missiles[missile].top >= enemies[enemy].top) && (missiles[missile].left <= enemies[enemy].left + 50) && (missiles[missile].left >= enemies[enemy].left)){
+              enemies.splice(enemy,1);
+              missiles.splice(missile,1);
+              //if the missle touches any of the aliens, then the alien dies
+            }
+          }
+          //////////////////////////////////////////////////this needs to be fixed
+          if(hero.top <= enemies[enemy].top + 50 && hero.top >= enemies[enemy].top){
+            console.log('top of hero touched');
+          }
+          // if (hero.top + 50 <= enemies[enemy].top && hero.top + 50 >= enemies[enemy].top + 50) {
+          //   console.log('bottom of hero touched');
+          // }
+          // if(hero.left + 50 >= enemies[enemy].left && hero.left + 50 <= enemies[enemy].left + 50){
+          //   console.log('right side of hero touched');
+          // }
+          // if(hero.left >= enemies[enemy].left && hero.left <= enemies[enemy].left + 50){
+          //   console.log('left side of hero touched');
+          // }
+        }
+      }
+
+      function gameLoop(){
+        setTimeout(gameLoop, 100);
+        // console.log('gameLoop is running');
+        moveMissiles(); //every time the game loops(1 sec = 1000 milisecs) the missile will move
+        drawMissiles(); //and then it will be drawn
+        moveEnemies();//same idea as missiles
+        drawEnemies();//same idea as missiles
+        collisionDetection();
+      }
+      gameLoop();
+
+      // move enemies left and RIGHT
+      // score
+      // does the ship hit the enemy?
+      // switch missile when a certain # of enemies are LEFT
+      // make the enemy explode rather than just disappear??
+      // only allow the items in the game to stay onscreen
+      // have the hero follow the mouse
+
+    </script>
+
+  </body>
+</html>
