@@ -33,8 +33,10 @@
 body {
   background-color: black;
 }
-#name_bar{
-background: linear-gradient(black, #3C3C3C,gray,#3C3C3C, black);
+#name_bar{width: 85%;
+    margin: 0 auto;
+    border-radius: 33%;
+    background: radial-gradient(white, #3C3C3C, #000000,#000000);
 }
 
 #middle_bar{
@@ -106,10 +108,6 @@ h3 {
   font-size: 130%;
   text-align: center;
 }
-.parallax-second-inner{
-  z-index: 2;
-  position: relative;
-}
 
 /* end parallax */
 #contact{
@@ -131,6 +129,19 @@ h3 {
 }
 
 .project_icon{
-  height: 170px;
-  width: auto;
+  height: 162px;
+  width: 162px;
+  /* margin-left: -1206px; */
+  /* margin-top: 20px; */
+  border-radius: 82px;
+  display: block;
+  margin: 0 auto;
+}
+.project-section{
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 75px;
+    grid-auto-flow: row;
+    /* (default sets it at row and places items in the next available spot in the row. Dense attempts to fill the empty spots in the grid, its an example of source order independence, meaning the grid can lay the items regardless of how they are in the markup/html) */
 }
