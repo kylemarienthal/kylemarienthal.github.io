@@ -41,6 +41,8 @@ body {
 
 #middle_bar{
 background: linear-gradient(black, #3C3C3C,gray,#3C3C3C, black);
+font-size: 50px;
+text-align: center;
 }
 
 h1 {
