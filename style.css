@@ -107,8 +107,8 @@ h3 {
   margin: 10px 50px 20px;
   color: white;
   /* text-transform: uppercase; */
-  font-size: 130%;
-  text-align: center;
+  /* font-size: 130%; */
+  /* text-align: center; */
 }
 
 /* end parallax */
@@ -145,5 +145,15 @@ h3 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: auto;
     grid-auto-flow: row;
+    font-size: 130%;
     /* (default sets it at row and places items in the next available spot in the row. Dense attempts to fill the empty spots in the grid, its an example of source order independence, meaning the grid can lay the items regardless of how they are in the markup/html) */
+}
+.reference_icon{
+  height: 162px;
+  width: 162px;
+  /* margin-left: -1206px; */
+  /* margin-top: 20px; */
+  border-radius: 82px;
+  display: block;
+  margin: 0 auto;
 }
