@@ -146,6 +146,7 @@ h3 {
     grid-auto-rows: auto;
     grid-auto-flow: row;
     font-size: 130%;
+    text-align: center;
     /* (default sets it at row and places items in the next available spot in the row. Dense attempts to fill the empty spots in the grid, its an example of source order independence, meaning the grid can lay the items regardless of how they are in the markup/html) */
 }
 .reference_icon{
@@ -156,4 +157,5 @@ h3 {
   border-radius: 82px;
   display: block;
   margin: 0 auto;
+  text-align: center;
 }
