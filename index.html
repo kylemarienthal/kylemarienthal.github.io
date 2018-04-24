@@ -16,7 +16,7 @@
   </div>
   <h1 id="name_bar">Kyle Marienthal</h1>
   <div id="contact">
-    <p class="contact-info"><a id="resume" href="images/portfolio_resume.pdf" target="_blank">Resume'(will open in a new tab)</a></p>
+    <p class="contact-info"><a id="resume" href="images/Portfolio_Resume.pdf" target="_blank">Resume'(will open in a new tab)</a></p>
     <!-- github image -->
     <p class="contact-info"><a href="https://github.com/kylemarienthal"><img class = "contact_icon" src="images/white_github.png" alt="GitHub Icon"></a></p>
     <!-- GitHub handle -->
@@ -68,7 +68,11 @@
     </div>
   </div>
 
-  <p id="middle_bar">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.lorem </p>
+  <div class="middle_bar">
+    <p>Every second and fourth saturday of each month I volunteer at the Dallas Public Library. The organization I help is called Dallas Young Makers. Children ages 7-17 can come and learn everything from basic computer hardware setup to writing code for games like Minecraft. The club uses Raspberry Pi computers in order to teach the kids and make them accustom to things like the terminal/command prompt.</p>
+    <p><a href="https://www.facebook.com/DallasYoungMakersClub/"target="_blank">click here for more information</a></p>
+  </div>
+
 
   <!-- <section id="parallax-second"> -->
 <div class="parallax-second parallax-inner">
@@ -92,49 +96,52 @@
     </div> -->
 
 
-    <div class="slideshow-container">
+<div class="slideshow-container">
 
-<div class="mySlides fade reference_icon">
-  <img src="images/empire.jpg" style="width:100%">
-  <div class="text">This is where the reference will go. shouldn't be more than a couple sentences. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-</div>
-<div class="mySlides fade reference_icon">
-  <img src="images/batman_beyond.png" style="width:100%">
-  <div class="text">This is where the reference will go. shouldn't be more than a couple sentences. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-</div>
-
-<div class="mySlides fade reference_icon">
-  <img src="images/ace_high.jpg" style="width:100%">
-  <div class="text">This is where the reference will go. shouldn't be more than a couple sentences. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-</div>
-<div style="text-align:center">
-  <span class="dot"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
-</div>
-    <script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 7000); // Change image every 2 seconds
-}
-</script>
-
+  <div class="mySlides fade reference_icon">
+    <img src="images/empire.jpg" style="width:100%">
+    <div class="text">This is where the reference will go. shouldn't be more than a couple sentences. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
   </div>
+  <div class="mySlides fade reference_icon">
+    <img src="images/batman_beyond.png" style="width:100%">
+    <div class="text">This is where the reference will go. shouldn't be more than a couple sentences. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </div>
+
+  <div class="mySlides fade reference_icon">
+    <img src="images/ace_high.jpg" style="width:100%">
+    <div class="text">This is where the reference will go. shouldn't be more than a couple sentences. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </div>
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 7000); // Change image every 2 seconds
+      }
+    </script>
+
+</div>
     <div class="parallax-second-inner">
       <p>parallax second inner</p>
     </div>

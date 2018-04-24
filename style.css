@@ -39,10 +39,11 @@ body {
     background: radial-gradient(white, #3C3C3C, #000000,#000000);
 }
 
-#middle_bar{
-background: linear-gradient(black, #3C3C3C,gray,#3C3C3C, black);
-font-size: 50px;
-text-align: center;
+.middle_bar{
+  background: url('image/pi.jpg') repeat-y fixed 50%;
+  background: linear-gradient(black, #3C3C3C,gray,#3C3C3C, black);
+  font-size: 25px;
+  text-align: center;
 }
 
 h1 {
@@ -149,6 +150,7 @@ h3 {
     text-align: center;
     /* (default sets it at row and places items in the next available spot in the row. Dense attempts to fill the empty spots in the grid, its an example of source order independence, meaning the grid can lay the items regardless of how they are in the markup/html) */
 }
+
 .reference_icon{
   height: 162px;
   width: 162px;
@@ -166,6 +168,9 @@ h3 {
 .parallax-inner{
   overflow: auto;
   max-height: 100vh;
+}
+.slideshow-container{
+  display: inline-block;
 }
 
 .fade {
