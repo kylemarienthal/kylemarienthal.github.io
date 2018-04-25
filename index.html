@@ -71,9 +71,39 @@
   <div class="middle_bar">
     <p>Every second and fourth saturday of each month I volunteer at the Dallas Public Library. The organization I participate in is called Dallas Young Makers. Children ages 7-17 can come and learn everything from basic computer hardware setup to writing code for games like Minecraft. The club uses Raspberry Pi computers in order to teach the kids and make them accustom to things like the terminal/command prompt.</p>
     <p>
-      <a href="https://www.facebook.com/DallasYoungMakersClub/"target="_blank"><img id="raspberryPi" src="images/fb_young_makers.png" alt="Raspberry Pi Logo"></a>
+      <a href="https://www.facebook.com/DallasYoungMakersClub/"target="_blank"><img id="young_makers_image" src="images/fb_young_makers.png" alt="Dallas Young Makers Club Facebook profile picture"></a>
 
-      <a href="images/young_makers.png" target="blank"><img id="raspberryPi" src="images/young_makers.png" alt="Young Makers Logo"></a>
+      <!-- Modal image HTML start-->
+      <img id="myImg" src='images/young_makers.png' alt="Young Makers Flyer">
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+      <!-- Modal image HTML end -->
+      <!-- Modal image javascript start -->
+      <script type="text/javascript">
+
+        // get the modal
+        var modal = document.getElementById('myModal');
+        // get the image and insert it inside the modal - use its 'alt' text as a caption.
+        var img = document.getElementById('myImg')
+        var modalImg = document.getElementById('img01')
+        var captionText = document.getElementById('caption')
+        img.onclick = function(){
+          modal.style.display = 'block';
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+        // get the <span> element that closes the modal
+        var span = document.getElementsByClassName('close')[0];
+        // close modal when the x is clicked
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+      </script>
+      <!-- Modal image javascript end -->
     </p>
   </div>
 
