@@ -22,9 +22,8 @@
       var hero = {
         top: 700,
         left: 550,
-        bottom: 750,
-        right: 600
-
+        // bottom: 750,
+        // right: 600
       };
       // var deadHero = {
       //   top:700,
@@ -53,6 +52,7 @@
       ];
 
       document.onkeydown = function(e){
+        // this function runs every time a button on the keyboard is pressed
         // console.log(e.keyCode);
         if (e.keyCode === 37){
           // console.log('LEFT');
@@ -87,6 +87,8 @@
       function moveHero(){
         document.getElementById('hero').style.left = hero.left + 'px';
         document.getElementById('hero').style.top = hero.top + 'px';
+        // document.getElementById('hero').style.bottom = hero.bottom +'px';
+
       }
 
       function drawMissiles() {
@@ -103,7 +105,7 @@
 
       }
 
-      function drawEnemies(){
+      function drawEnemies() {
         document.getElementById('enemies').innerHTML = '';
         for (var enemy = 0; enemy < enemies.length; enemy++) {
           document.getElementById('enemies').innerHTML += `<div class = 'enemy' style = 'left:${enemies[enemy].left}px; top:${enemies[enemy].top}px;'></div>`
@@ -117,6 +119,13 @@
 
       }
 
+      function playerDies() {
+        var ship = document.getElementById('hero');
+        if(ship){
+          ship.parentNode.removeChild(ship)
+        }
+      }
+
       function collisionDetection() {//try and figure out a better way than using a nested loop
         for (var enemy = 0; enemy < enemies.length; enemy++) {
           for (var missile = 0; missile < missiles.length; missile++) {
@@ -128,29 +137,29 @@
             }
           }
           // these work logically******************************
-          // if(hero.top <= enemies[enemy].top + 50 && hero.top >= enemies[enemy].top){
-          //   console.log('top of hero touched');
-          // }
-          console.log(hero.top);
-          if(hero.bottom >= enemies[enemy].top && hero.bottom <= enemies[enemy].top + 50){
-            console.log('bottom of hero touched');
+          if(hero.top <= enemies[enemy].top + 50 && hero.top >= enemies[enemy].top){
+            if(hero.left >= enemies[enemy].left && hero.left <= enemies[enemy].left + 50){
+              console.log('top of hero touched');
+              playerDies();
+            }
           }
-          // if(hero.left <= enemies[enemy].left + 50 && hero.left >= enemies[enemy].left ){
-          //   console.log('left side of hero touched');
-          // }
-          // if(hero.left + 50 >= enemies[enemy].left && hero.left + 50 <= enemies[enemy].left + 50){
-          //     console.log('right side of hero touched');
-          // }
-          //////////////////////////////////////////////////this needs to be fixed
-          // if (hero.top + 50 <= enemies[enemy].top && hero.top + 50 >= enemies[enemy].top + 50) {
-          //   console.log('bottom of hero touched');
-          // }
-          // if(hero.left + 50 >= enemies[enemy].left && hero.left + 50 <= enemies[enemy].left + 50){
-          //   console.log('right side of hero touched');
-          // }
-          // if(hero.left >= enemies[enemy].left && hero.left <= enemies[enemy].left + 50){
-          //   console.log('left side of hero touched');
-          // }
+          else if(hero.top+ 50 >= enemies[enemy].top && hero.top + 50 <= enemies[enemy].top + 50){
+            if(hero.left >= enemies[enemy].left && hero.left <= enemies[enemy].left + 50){
+              console.log('bottom of hero touched');
+              playerDies();
+            }
+          }
+          else if(hero.left <= enemies[enemy].left + 50 && hero.left >= enemies[enemy].left ){
+            // console.log('touched my lefy');
+            if(hero.top >= enemies[enemy].top && hero.top <= enemies[enemy].top + 50){
+              console.log('left side of hero touched');
+            }
+          }
+          else if(hero.left + 50 >= enemies[enemy].left && hero.left + 50 <= enemies[enemy].left + 50){
+            if(hero.top >= enemies[enemy].top && hero.top <= enemies[enemy].top + 20){
+              console.log('right side of hero touched');
+            }
+          }
         }
       }
 
