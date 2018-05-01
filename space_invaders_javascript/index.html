@@ -16,7 +16,7 @@
     </div>
     <div>
       <a class="" href="../index.html"><button type="button" name="back">BACK</button></a>
-      <a class="" href="./index.html"><button type="button" name="back">RESTART</button></a>
+      <a class="" href="./index.html" id="restart"><button type="button" name="back">RESTART</button></a>
     </div>
     <script>
       var hero = {
@@ -114,15 +114,18 @@
 
       function moveEnemies() {
         for (var enemy = 0; enemy < enemies.length; enemy++) {
-          enemies[enemy].top += .1;
+          enemies[enemy].top += 1; //speed up alien ships
         }
-
       }
 
       function playerDies() {
         var ship = document.getElementById('hero');
         if(ship){
-          ship.parentNode.removeChild(ship)
+
+          restart = document.getElementById('restart')
+          restart.click();
+          alert("You died sucka");
+          ship.parentNode.removeChild(ship);
         }
       }
 
@@ -138,15 +141,19 @@
           }
           // these work logically******************************
           if(hero.top <= enemies[enemy].top + 50 && hero.top >= enemies[enemy].top){
-            if(hero.left >= enemies[enemy].left && hero.left <= enemies[enemy].left + 50){
+            if(hero.left >= enemies[enemy].left && hero.left <= enemies[enemy].left + 50 || hero.left + 50 >= enemies[enemy].left && hero.left + 50 <= enemies[enemy].left + 50){
               console.log('top of hero touched');
-              playerDies();
+
+              return true;
+              // playerDies();
             }
           }
           else if(hero.top+ 50 >= enemies[enemy].top && hero.top + 50 <= enemies[enemy].top + 50){
-            if(hero.left >= enemies[enemy].left && hero.left <= enemies[enemy].left + 50){
+            if(hero.left >= enemies[enemy].left && hero.left <= enemies[enemy].left + 50 || hero.left + 50 >= enemies[enemy].left && hero.left + 50 <= enemies[enemy].left + 50){
               console.log('bottom of hero touched');
-              playerDies();
+
+              return true;
+              // playerDies();
             }
           }
           else if(hero.left <= enemies[enemy].left + 50 && hero.left >= enemies[enemy].left ){
@@ -164,19 +171,24 @@
       }
 
       function gameLoop(){
-        setTimeout(gameLoop, 100);
+        var game = setTimeout(gameLoop, 100);
         // console.log('gameLoop is running');
         moveMissiles(); //every time the game loops(1 sec = 1000 milisecs) the missile will move
         drawMissiles(); //and then it will be drawn
         moveEnemies();//same idea as missiles
         drawEnemies();//same idea as missiles
-        collisionDetection();
+        var collide = collisionDetection();
+
+        if (collide) {
+          clearTimeout(game)
+          playerDies();
+        }
       }
       gameLoop();
 
       // move enemies left and RIGHT
       // score
-      // does the ship hit the enemy?
+      // does the ship hit the enemy? completed
       // switch missile when a certain # of enemies are LEFT
       // make the enemy explode rather than just disappear??
       // only allow the items in the game to stay onscreen
